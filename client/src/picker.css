@@ -1,0 +1,12 @@
+.picker-controls { grid-template-columns: repeat(3, 1fr) 1.25fr .7fr; }
+.clear-pick { border: 1px solid #5d5d60; border-radius: 4px; background: transparent; color: #ddd8cf; padding: 10px; }
+.clear-pick:disabled { opacity: .4; cursor: not-allowed; }
+@media (max-width: 900px) { .picker-controls { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .picker-controls { grid-template-columns: 1fr; } }
+.quest-launcher { position: fixed; right: 28px; bottom: 28px; z-index: 12; width: 238px; padding: 18px; text-align: left; border: 1px solid #806f3e; border-radius: 7px; background: linear-gradient(135deg, #292312, #17181b); color: #f2eee6; box-shadow: 0 16px 42px #0009; }
+.quest-launcher span, .quest-launcher em { display: block; color: #ddc77e; font: 11px 'DM Mono', monospace; letter-spacing: 1px; font-style: normal; }
+.quest-launcher strong { display: block; margin: 8px 0 14px; font: 600 20px 'Playfair Display', serif; }
+.picker-overlay { position: fixed; inset: 0; z-index: 30; display: grid; place-items: center; padding: 20px; background: #000c; }
+.night-picker { position: relative; width: min(720px, 100%); max-height: 90vh; overflow: auto; margin: 0; box-shadow: 0 20px 60px #000b; }
+.close-picker { position: absolute; top: 12px; right: 12px; width: 34px; height: 34px; border: 0; border-radius: 50%; background: #111b; color: #fff; font-size: 27px; line-height: 1; }
+@media (max-width: 600px) { .quest-launcher { right: 16px; bottom: 16px; width: calc(100% - 32px); } .picker-overlay { padding: 12px; } }
