@@ -1,5 +1,17 @@
 node_modules
 dist
+
+# Local environment files and secrets
 .env
-client/.env
-server/.env
+.env.*
+!.env.example
+!client/.env.example
+!server/.env.example
+
+# Private keys and local credential files
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets/

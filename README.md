@@ -72,6 +72,21 @@ CineQuest is a movie discovery app for finding something worth watching without 
 
 6. Open [http://localhost:5173](http://localhost:5173).
 
+## Deploying to Vercel
+
+1. Import this repository into [Vercel](https://vercel.com/new).
+2. Keep the project root set to the repository root. The included `vercel.json` builds the Vite client from `client/dist` and exposes the Express API as a serverless function.
+3. Add these Vercel environment variables for the Production environment:
+
+	```env
+	TMDB_API_KEY=your_tmdb_read_access_token_or_api_key
+	MONGODB_URI=your_mongodb_connection_string
+	```
+
+4. Deploy. Vercel will provide the public URL for CineQuest.
+
+MongoDB is recommended for a deployed wishlist. The in-memory fallback is temporary and can be reset whenever a serverless function instance is recycled.
+
 ## Available Commands
 
 Run these commands from the repository root:
